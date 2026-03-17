@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --max-w: 1200px;
+  --accent: #8a4b23; /* cinnamon accent */
+  --accent-2: #c98b5a;
+  --muted: #6b6b6b;
+  --bg: #faf7f5;
+  --card-bg: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 14px;
+  --shadow-sm: 0 4px 12px rgba(20,20,20,0.06);
+  --shadow-md: 0 12px 30px rgba(20,20,20,0.09);
+  --shadow-lg: 0 24px 60px rgba(20,20,20,0.12);
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #fff 100%);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+img{max-width:100%;display:block;height:auto}
+.container{max-width:var(--max-w);margin:0 auto;padding:1.25rem}
+
+
+/* Header / Navbar (sticky) */
+header{
+  position:sticky;top:0;z-index:80;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(110,84,64,0.06);
+}
+nav{
+  display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:0.2rem 0;
+}
+nav .logo{display:flex;align-items:center;gap:.75rem}
+nav .logo img{height:auto;width:300px;}
+nav h2{font-size:1rem;margin:0;font-weight:700;color:var(--accent);letter-spacing:0.4px}
+nav ul{list-style:none;display:flex;margin:0;padding:0;align-items:center}
+nav ul li a{
+  text-decoration:none;color:#2b2b2b;padding:0.1rem 0.6rem;border-radius:10px;font-weight:600;font-size:.95rem
+}
+nav ul li a:hover, nav ul li a:focus{background:linear-gradient(90deg, rgba(138,75,35,0.08), rgba(201,139,90,0.06));outline:none}
+
+/* Mobile responsive nav: stack items under logo for small screens */
+@media (max-width:880px){
+  nav{flex-direction:column;align-items:flex-start;padding:0.8rem}
+  nav ul{width:100%;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+  nav h2{font-size:.95rem}
+}
+
+/* Hero */
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background-image: url('/assets/cinnamon_background.jpg');
+  background-size:cover;
+  background-position:center center;
+}
+.hero:before{
+  content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,6,4,0.08), rgba(0,0,0,0.18));mix-blend-mode:multiply;pointer-events:none;
+}
+.hero-content{position:relative;z-index:2;max-width:980px;padding:3.5rem 1.25rem;text-align:center}
+.hero-content h1{font-size:clamp(2rem, 4.2vw, 3.4rem);margin:0 0 .6rem;line-height:1.03;font-weight:800;letter-spacing:-0.02em}
+.hero-content p{font-size:1.05rem;margin:0 0 1.4rem;opacity:0.95}
+.btn{display:inline-block;padding:.9rem 1.3rem;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;text-decoration:none;font-weight:700;box-shadow:var(--shadow-md);transition:transform .18s ease, box-shadow .18s ease}
+.btn:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+
+/* Section headings */
+h2{font-size:1.6rem;color:#222;margin:1.25rem 0}
+h3{font-size:1.05rem;color:var(--accent);margin:.6rem 0}
+
+/* Content layout */
+section{padding:3rem 0}
+section > .container > p, section > .container > div{color:var(--muted)}
+
+/* Cards & Grades grid */
+.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.25rem}
+.grade{
+  background:var(--card-bg);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow-sm);transition:transform .18s ease, box-shadow .18s ease;border:1px solid rgba(100,70,50,0.04)
+}
+.grade h3{margin-top:0;margin-bottom:.5rem}
+.grade p{margin:0;color:#515151}
+.grade:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+
+@media (max-width:1100px){.grades{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.grades{grid-template-columns:1fr}}
+
+/* Contact form styling */
+#contact form{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;align-items:start;max-width:900px;margin:0 auto}
+#contact input[type='text'], #contact input[type='email'], #contact select, #contact textarea{
+  width:100%;padding:.85rem;border-radius:10px;border:1px solid rgba(80,60,40,0.09);background:linear-gradient(180deg,#fff,#fbfaf9);box-shadow:var(--shadow-sm);font-size:.95rem
+}
+#contact textarea{min-height:140px;resize:vertical;grid-column:1 / -1}
+#contact button{grid-column:1 / -1;padding:0.9rem;border-radius:12px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;box-shadow:var(--shadow-md)}
+#contact button:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+@media (max-width:880px){#contact form{grid-template-columns:1fr}}
+
+/* Contact page boxes (contact.html) */
+.contact .wrapper{max-width:600px;margin:0 auto;padding:1rem}
+.box{background:linear-gradient(180deg,#fff,#fff);padding:1.6rem;border-radius:14px;box-shadow:var(--shadow-md);border:1px solid rgba(120,80,40,0.04)}
+.center-text{text-align:center}
+.left-text{text-align:left}
+.push-right{margin-left:auto}
+.info-list{list-style:none;padding:0;margin:0}
+.info-item{padding:.45rem 0;border-bottom:1px dashed rgba(200,170,140,0.06)}
+.info-item:last-child{border-bottom:none}
+
+/* Footer */
+footer{padding:2rem 0;background:linear-gradient(180deg, rgba(230,225,221,0.6), rgba(245,243,242,0.6));text-align:center;color:#4a3b2f}
+footer p{margin:.25rem 0}
+
+/* Utility */
+.rounded{border-radius:12px}
+.mb-5{margin-bottom:1.25rem}
+.heading-upper{display:block;font-size:.9rem;color:var(--muted)}
+.heading-lower{display:block;font-size:1.6rem;color:var(--accent);font-weight:700}
+
+/* Accessibility focus states */
+a:focus, button:focus, input:focus, select:focus, textarea:focus{outline:3px solid rgba(138,75,35,0.12);outline-offset:3px}
+
+/* Small tweaks for older pages where .grades used in product.html */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media (max-width:1100px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.products-grid{grid-template-columns:1fr}}
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.menu-toggle span{
+width:25px;
+height:3px;
+background:#333;
+border-radius:2px;
+}
+
+/* MOBILE MENU */
+
+@media (max-width: 880px){
+
+.menu-toggle{
+display:flex;
+}
+
+nav ul{
+display:none;
+flex-direction:column;
+width:100%;
+background:white;
+padding:1rem;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+nav ul.active{
+display:flex;
+}
+
+}
+
+/* Contact section background image */
+.contact {
+  background: linear-gradient(120deg, rgba(201,139,90,0.10), rgba(138,75,35,0.08)), url('/assets/cinnamon_q.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+li.list-item.info-item a[href^="mailto:"] {
+  color: #8a4b23;
+}
