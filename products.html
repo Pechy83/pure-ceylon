@@ -32,35 +32,86 @@
         </div>
     </header>
 
-    <section>
-        <div class="container">
-            <h2>Our Cinnamon Products</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Cinnamon Quills</h3>
-                    <p>Premium hand rolled Ceylon cinnamon sticks ideal for gourmet food and tea.</p>
-                </div>
-                <div class="card">
-                    <h3>Cinnamon Powder</h3>
-                    <p>Finely ground cinnamon for bakeries, spice blends and food production.</p>
-                </div>
-                <div class="card">
-                    <h3>Cinnamon Cut</h3>
-                    <p>Cut cinnamon suitable for tea bags and extraction.</p>
-                </div>
-                <div class="card">
-                    <h3>Organic Cinnamon</h3>
-                    <p>Certified organic Ceylon cinnamon for premium markets.</p>
-                </div>
+    <section class="products">
+    <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Premium Ceylon Cinnamon & Spices from Sri Lanka</p>
+
+        <div class="product-grid">
+
+            <div class="product-card" onclick="openProduct('alba')">
+                <h3>Alba</h3>
+                <img src="assets/alba.jpg" alt="Alba quills">
+            </div>
+
+            <div class="product-card" onclick="openProduct('c5special')">
+                <h3>C5 Special</h3>
+                <img src="assets/continental.jpg" alt="Continental quills">
+            </div>
+
+            <div class="product-card" onclick="openProduct('c5')">
+                <h3>C5</h3>
+                <img src="assets/continental.jpg" alt="C5 quills">
+            </div>
+
+            <div class="product-card" onclick="openProduct('c4')">
+                <h3>C4</h3>
+                <img src="assets/continental.jpg" alt="C4 quills">
+            </div>
+
+            <div class="product-card" onclick="openProduct('m4')">
+                <h3>M4</h3>
+                <img src="assets/mexican.jpg" alt="M4 quills">
+            </div>
+
+            <div class="product-card" onclick="openProduct('h1')">
+                <h3>H1</h3>
+                <img src="assets/hamburg.jpg" alt="H1 quills">       
+            </div>
+
+            <div class="product-card" onclick="openProduct('h2')">
+                <h3>H2</h3>
+                <img src="assets/hamburg.jpg" alt="H2 quills">
+            </div>
+            <!-- OILS -->
+            <div class="product-card">
+                <h3>Cinnamon Oils</h3>
+                <ul>
+                    <li>Leaf Oil</li>
+                    <li>Bark Oil 50%</li>
+                </ul>
+            </div>
+            <!-- OTHER SPICES -->
+            <div class="product-card">
+                <h3>Other Spices</h3>
+                <ul>
+                    <li>Black Pepper</li>
+                    <li>Clove</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- MODAL -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProduct()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+
+        <ul id="modalSpecs"></ul>
+
+        <a href="contact.html" class="btn-primary">Request Quote</a>
+    </div>
+</div>
+
+        
     <footer>
         <p>Pure Ceylon Export</p>
         <p>Premium Ceylon Cinnamon Exporter From Sri Lanka</p>
         <p>Email: sales@pureceylonexport.com</p>
-        <p>In cooperation with Ceylon Wood Exports (Pvt) Ltd.</p>
+        <p>Operated by Ceylon Wood Export (Pvt) Ltd.</p>
         <p>&copy; 2025 Pure Ceylon Export. All rights reserved.</p>
     </footer>
 
