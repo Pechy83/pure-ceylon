@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Ceylon Export | Premium Ceylon Cinnamon Exporter</title>
-    <meta name="description" content="Supplier of authentic Ceylon cinnamon from Sri Lanka. Bulk export of cinnamon quills, powder and cut cinnamon for international buyers.">
+    <title>Ceylon Cinnamon Trade | Premium Ceylon Cinnamon Exporter</title>
+    <meta name="description" content="Supplier of authentic Ceylon cinnamon (cinnamon verum) from Sri Lanka. Bulk export of cinnamon quills, powder and cut cinnamon for international buyers.">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/cinnamon_icon.png" />
@@ -14,7 +14,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><img src="assets/logo_pure.png" alt="Pure Ceylon Export Logo"></a>
+                <a href="index.html" class="logo"><img src="assets/logo_trade.png" alt="Pure Ceylon Export Logo"></a>
                 
                 <div class="menu-toggle">
                   <span></span>
@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="export.html">Export</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                     <li><a href="grade.html">Grades</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -32,89 +32,109 @@
         </div>
     </header>
 
-    <section class="products">
+<section class="catalog">
     <div class="container">
-        <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">Premium Ceylon Cinnamon & Spices from Sri Lanka</p>
 
-        <div class="product-grid">
+    <h2 class="section-title">Our Products</h2>
 
-            <div class="product-card" onclick="openProduct('alba')">
-                <h3>Alba</h3>
-                <img src="assets/alba.jpg" alt="Alba quills">
-            </div>
+    <!-- FILTER -->
+    <div class="catalog-filter">
+      <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+      <button class="filter-btn" onclick="filterProducts('cinnamon')">Cinnamon</button>
+      <button class="filter-btn" onclick="filterProducts('oil')">Oils</button>
+      <button class="filter-btn" onclick="filterProducts('spice')">Spices</button>
+    </div>
 
-            <div class="product-card" onclick="openProduct('c5special')">
-                <h3>C5 Special</h3>
-                <img src="assets/continental.jpg" alt="Continental quills">
-            </div>
+    <!-- GRID -->
+    <div class="catalog-grid">
 
-            <div class="product-card" onclick="openProduct('c5')">
-                <h3>C5</h3>
-                <img src="assets/continental.jpg" alt="C5 quills">
-            </div>
+      <div class="catalog-card" data-category="cinnamon" onclick="openProduct('alba')">
+        <h3>Alba</h3>
+        <p>Premium grade cinnamon</p>
+        <img src="assets/alba.jpg" alt="Alba quills">
+      </div>
 
-            <div class="product-card" onclick="openProduct('c4')">
-                <h3>C4</h3>
-                <img src="assets/continental.jpg" alt="C4 quills">
-            </div>
+      <div class="catalog-card" data-category="cinnamon" onclick="openProduct('c5')">
+        <h3>C5/C5 Special</h3>
+        <p>Export standard grade</p>
+        <img src="assets/continental.jpg" alt="C5 quills">
+      </div>
 
-            <div class="product-card" onclick="openProduct('m4')">
-                <h3>M4</h3>
-                <img src="assets/mexican.jpg" alt="M4 quills">
-            </div>
+      <div class="catalog-card" data-category="cinnamon" onclick="openProduct('c4')">
+        <h3>C4</h3>
+        <p>Commercial grade</p>
+        <img src="assets/continental.jpg" alt="C4 quills">
+      </div>
 
-            <div class="product-card" onclick="openProduct('h1')">
-                <h3>H1</h3>
-                <img src="assets/hamburg.jpg" alt="H1 quills">       
-            </div>
+      <div class="catalog-card" data-category="cinnamon" onclick="openProduct('m4')">
+        <h3>M4</h3>
+        <p>Mid-tier export grade</p>
+        <img src="assets/mexican.jpg" alt="M4 quills">
+      </div>
 
-            <div class="product-card" onclick="openProduct('h2')">
-                <h3>H2</h3>
-                <img src="assets/hamburg.jpg" alt="H2 quills">
-            </div>
-            <!-- OILS -->
-            <div class="product-card">
-                <h3>Cinnamon Oils</h3>
-                <ul>
-                    <li>Leaf Oil</li>
-                    <li>Bark Oil 50%</li>
-                </ul>
-            </div>
-            <!-- OTHER SPICES -->
-            <div class="product-card">
-                <h3>Other Spices</h3>
-                <ul>
-                    <li>Black Pepper</li>
-                    <li>Clove</li>
-                </ul>
-            </div>
-        </div>
+      <div class="catalog-card" data-category="cinnamon" onclick="openProduct('h1')">
+        <h3>H1/H2</h3>
+        <p>Industrial grade</p>
+        <img src="assets/hamburg.jpg" alt="H1 quills">
+      </div>
+
+      <div class="catalog-card" data-category="oil" onclick="openProduct('leafoil')">
+        <h3>Leaf Oil</h3>
+        <p>Essential oil</p>
+      </div>
+
+      <div class="catalog-card" data-category="oil" onclick="openProduct('barkoil50')">
+        <h3>Bark Oil 50%</h3>
+        <p>High cinnamaldehyde</p>
+      </div>
+
+      <div class="catalog-card" data-category="oil" onclick="openProduct('barkoil30')">
+        <h3>Bark Oil 30%</h3>
+        <p>High cinnamaldehyde</p>
+      </div>
+
+      <div class="catalog-card" data-category="spice" onclick="openProduct('pepper')">
+        <h3>Black Pepper</h3>
+        <p>Premium export quality</p>
+      </div>
+
+      <div class="catalog-card" data-category="spice" onclick="openProduct('clove')">
+        <h3>Clove</h3>
+        <p>High aroma spice</p>
+      </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="productModal" class="modal" onclick="closeOnBackdrop(event)">
+      <div class="modal-content">
+    
+      <span class="close" onclick="closeProduct()">&times;</span>
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <ul id="modalSpecs"></ul>
+
+      <div class="modal-extra">
+        <p id="modalMOQ"><strong>MOQ:</strong> 100 kg</p>
+        <p id="modalPackaging"><strong>Packaging:</strong> Bales / Cartons</p>
+      </div>
+
+      <a href="contact.html" class="btn-primary">Request Quote</a>
+
     </div>
 </section>
-
-<!-- MODAL -->
-<div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeProduct()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
-
-        <ul id="modalSpecs"></ul>
-
-        <a href="contact.html" class="btn-primary">Request Quote</a>
-    </div>
-</div>
-
-        
+  
     <footer>
-        <p>Pure Ceylon Export</p>
+        <p>Ceylon Cinnamon Trade</p>
         <p>Premium Ceylon Cinnamon Exporter From Sri Lanka</p>
-        <p>Email: sales@pureceylonexport.com</p>
-        <p>Operated by Ceylon Wood Export (Pvt) Ltd.</p>
-        <p>&copy; 2025 Pure Ceylon Export. All rights reserved.</p>
+        <p>Email: daniel.pechacek@ceylonwoodexports.com</p>
+        <p>All rights reserved. &copy; Ceylon Wood Exports</p>
+        <img src="assets/logo_white.png" alt="Ceylon Wood Export Logo" width="150px" height="auto" style="display: block; margin: 20px auto; text-align: center;">
+        <p>Operated by Ceylon Wood Export (Pvt) Ltd</p>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>
