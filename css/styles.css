@@ -175,7 +175,7 @@ header.scrolled {
   position:relative;
   overflow:hidden;
   color:#fff;
-  background-image: url('../assets/cinnamon_background.jpg');
+  background-image: url('../assets/cinnamon_background1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -496,7 +496,7 @@ display:flex;
 
 /* Contact section background image */
 .contact {
-  background: linear-gradient(120deg, rgba(201,139,90,0.10), rgba(138,75,35,0.08)), url('../assets/cinnamon_q.jpg');
+  background: linear-gradient(120deg, rgba(201,139,90,0.10), rgba(138,75,35,0.08)), url('../assets/cinnamon_q1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

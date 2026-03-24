@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "Light color and refined aroma",
         "Ideal for high-end buyers"
       ],
+      foto: "assets/alba1.jpg",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
+
     c5: {
       title: "C5 / C5 Special",
       desc: "Export standard cinnamon with excellent balance of quality and price.",
