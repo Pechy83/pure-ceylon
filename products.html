@@ -29,7 +29,7 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li class="list-item info-item flex flex-col flex-row start-text">
                         <a href="https://wa.me/+420723028973" target="_blank" class="push-right underline break">
-                            <img src="assets/whatsapp.png" alt="WhatsApp" width="30px" height="30px" style="margin-left: 20px;">                            
+                            <img src="assets/whatsapp.png" alt="WhatsApp" width="30px" height="30px">                            
                         </a>
                     </li>
                 </ul>
@@ -38,8 +38,7 @@
     </header>
 
 <section class="catalog">
-    <div class="container">
-
+  <div class="container">
     <h2 class="section-title">Our Products</h2>
 
     <!-- FILTER -->
@@ -124,27 +123,29 @@
         <p>High aroma spice</p>
         <img src="assets/clove.jpg" alt="Clove">
       </div>
-
     </div>
 
     <!-- MODAL -->
-    <div id="productModal" class="modal" onclick="closeOnBackdrop(event)">
-      <div class="modal-content">
-    
+  <div id="productModal" class="modal" onclick="closeOnBackdrop(event)">
+    <div class="modal-content">
+
       <span class="close" onclick="closeProduct()">&times;</span>
+
+      <img id="modalImage" class="modal-image" src="" alt="">
 
       <h2 id="modalTitle"></h2>
       <p id="modalDesc"></p>
       <ul id="modalSpecs"></ul>
 
       <div class="modal-extra">
+        <p id="modalOrigin"><strong>Origin:</strong> Sri Lanka</p>
         <p id="modalMOQ"><strong>MOQ:</strong> 100 kg</p>
         <p id="modalPackaging"><strong>Packaging:</strong> Bales / Cartons</p>
       </div>
 
-      <a href="contact.html" class="btn-primary">Request Quote</a>
-
+        <a href="contact.html" class="btn-primary">Request Quote</a>
     </div>
+  </div>
 </section>
   
   <footer class="site-footer">

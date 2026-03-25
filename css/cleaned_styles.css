@@ -617,6 +617,7 @@ textarea:focus {
   align-items: center;
   z-index: 9999;
   padding: 20px;
+  overflow: hidden;
 }
 
 .modal.active {
@@ -627,19 +628,33 @@ textarea:focus {
   background: #fff;
   width: 100%;
   max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
   border-radius: 20px;
-  padding: 30px;
+  padding: 52px 30px 30px;
   position: relative;
   animation: fadeIn 0.25s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
 }
 
 .close {
   position: absolute;
   top: 14px;
   right: 18px;
-  font-size: 32px;
+  font-size: 34px;
   cursor: pointer;
   line-height: 1;
+  z-index: 10;
+  color: #111;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 18px;
 }
 
 .modal-content ul {
@@ -661,6 +676,24 @@ textarea:focus {
   color: #fff;
   text-decoration: none;
   border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 92vw;
+    max-height: 90vh;
+    padding: 48px 18px 20px;
+  }
+
+  .close {
+    top: 10px;
+    right: 14px;
+    font-size: 30px;
+  }
+
+  .modal-image {
+    max-height: 180px;
+  }
 }
 
 @keyframes fadeIn {
@@ -778,4 +811,42 @@ textarea:focus {
     justify-self: center;
     text-align: center;
   }
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  object-fit: cover;
+} 
+
+/* img wrapper */
+.grades-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.grade-image-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.grade-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: zoom-in;
+  border-radius: 8px;
+}
+
+.grade-image-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.grade-image-wrapper img:hover {
+  transform: scale(1.3);
 }

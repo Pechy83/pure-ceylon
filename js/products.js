@@ -1,5 +1,3 @@
-// počkej na načtení DOM
-document.addEventListener("DOMContentLoaded", function () {
 
   const productData = {
     alba: {
@@ -11,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Light color and refined aroma",
         "Ideal for high-end buyers"
       ],
-      foto: "assets/alba1.jpg",
+      image: "assets/alba1.jpg",
+      alt: "Alba cinnamon quills",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
@@ -25,9 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Popular commercial grade",
         "Stable aroma and appearance"
       ],
+      image: "assets/C5 special.jpg",
+      alt: "C5 cinnamon quills",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
+
     c4: {
       title: "C4",
       desc: "Commercial grade cinnamon for standard export and bulk supply.",
@@ -37,9 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Reliable aroma",
         "Competitive price segment"
       ],
+      image: "assets/C4.jpg",
+      alt: "C4 cinnamon quills",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
+
     m4: {
       title: "M4",
       desc: "Mid-tier export cinnamon grade with strong market demand.",
@@ -49,9 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Balanced price and quality",
         "Suitable for large orders"
       ],
+      image: "assets/M4.jpg",
+      alt: "M4 cinnamon quills",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
+
     h1: {
       title: "H1 / H2",
       desc: "Industrial grade cinnamon used for lower-end processing or bulk applications.",
@@ -61,9 +69,40 @@ document.addEventListener("DOMContentLoaded", function () {
         "Economical option",
         "Consistent supply"
       ],
+      image: "assets/H1.jpg",
+      alt: "H1 cinnamon quills",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
+
+    quillings: {
+      title: "Quills",
+      desc: "Whole cinnamon quills for various applications.",
+      specs: [
+        "Whole quills",
+        "Various sizes available",
+        "Export grade"
+      ],
+      image: "assets/quillings1.jpg",
+      alt: "Cinnamon quills",
+      moq: "100 kg",
+      packaging: "Bales / Cartons"
+    },
+
+    powder: {
+      title: "Powder",
+      desc: "Finely ground cinnamon powder for culinary and industrial use.",
+      specs: [
+        "Finely ground",
+        "Consistent quality",
+        "Export grade"
+      ],
+      image: "assets/powder1.jpg",
+      alt: "Cinnamon powder",
+      moq: "100 kg",
+      packaging: "Bales / Cartons"
+    },
+
     leafoil: {
       title: "Leaf Oil",
       desc: "Essential oil extracted from cinnamon leaves.",
@@ -72,9 +111,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Aromatic profile",
         "Suitable for industrial and cosmetic use"
       ],
+      image: "assets/leafoil1.jpg",
+      alt: "Cinnamon leaf oil",
       moq: "100 kg",
       packaging: "Drums / Canisters"
     },
+
     barkoil50: {
       title: "Bark Oil 50%",
       desc: "High cinnamaldehyde cinnamon bark oil.",
@@ -83,9 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Strong aroma",
         "High-value oil"
       ],
+      image: "assets/barkoil50.jpg",
+      alt: "Cinnamon bark oil 50%",
       moq: "100 kg",
       packaging: "Drums / Canisters"
     },
+
     barkoil30: {
       title: "Bark Oil 30%",
       desc: "Cinnamon bark oil with 30% cinnamaldehyde.",
@@ -94,9 +139,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Balanced strength",
         "Export ready"
       ],
+      image: "assets/barkoil30.jpg",
+      alt: "Cinnamon bark oil 30%",
       moq: "100 kg",
       packaging: "Drums / Canisters"
     },
+
     pepper: {
       title: "Black Pepper",
       desc: "Premium export quality black pepper.",
@@ -105,9 +153,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Clean export quality",
         "Bulk supply"
       ],
+      image: "assets/pepper1.jpg",
+      alt: "Black pepper",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
+
     clove: {
       title: "Clove",
       desc: "High aroma clove spice.",
@@ -116,10 +167,14 @@ document.addEventListener("DOMContentLoaded", function () {
         "Whole spice",
         "Export grade"
       ],
+      image: "assets/clove1.jpg",
+      alt: "Clove spice",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     }
   };
+
+ document.addEventListener("DOMContentLoaded", function () {
 
   function openProduct(productKey) {
     const product = productData[productKey];
@@ -133,24 +188,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const title = document.getElementById("modalTitle");
     const desc = document.getElementById("modalDesc");
     const specsList = document.getElementById("modalSpecs");
+    const modalImage = document.getElementById("modalImage");
+    const moq = document.getElementById("modalMOQ");
+    const packaging = document.getElementById("modalPackaging");
 
-    if (!modal || !title || !desc || !specsList) {
-      console.error("Modal elements not found");
-      return;
-    }
-
-    title.textContent = product.title;
-    desc.textContent = product.desc;
+    title.textContent = product.title || "";
+    desc.textContent = product.desc || "";
 
     specsList.innerHTML = "";
-    product.specs.forEach(spec => {
-      const li = document.createElement("li");
-      li.textContent = spec;
-      specsList.appendChild(li);
-    });
+    if (product.specs) {
+      product.specs.forEach(spec => {
+        const li = document.createElement("li");
+        li.textContent = spec;
+        specsList.appendChild(li);
+      });
+    }
 
-    document.getElementById("modalMOQ").innerHTML = `<strong>MOQ:</strong> ${product.moq}`;
-    document.getElementById("modalPackaging").innerHTML = `<strong>Packaging:</strong> ${product.packaging}`;
+    // 🔥 IMAGE FIX
+    if (modalImage && product.image) {
+      modalImage.src = product.image;
+      modalImage.alt = product.alt || product.title;
+      modalImage.style.display = "block";
+    }
+
+    if (moq) moq.innerHTML = `<strong>MOQ:</strong> ${product.moq || "—"}`;
+    if (packaging) packaging.innerHTML = `<strong>Packaging:</strong> ${product.packaging || "—"}`;
 
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
@@ -188,10 +250,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 🔥 důležité – zpřístupnění pro onclick
+  // 🔥 MUSÍ být uvnitř DOMContentLoaded
   window.openProduct = openProduct;
   window.closeProduct = closeProduct;
   window.closeOnBackdrop = closeOnBackdrop;
   window.filterProducts = filterProducts;
-
 });
