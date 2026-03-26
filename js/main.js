@@ -79,3 +79,22 @@ window.addEventListener("scroll", () => {
   document.querySelector("header").classList.toggle("scrolled", window.scrollY > 20);
 });
 
+        // Funkce pro kontrolu, zda je prvek viditelný na obrazovce
+        function animateOnScroll() {
+            const triggers = document.querySelectorAll('.js-scroll-trigger');
+            
+            triggers.forEach(trigger => {
+                const triggerTop = trigger.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                // Pokud je vršek prvku v 80% výšky okna, spustíme animaci
+                if (triggerTop < windowHeight * 0.85) {
+                    trigger.classList.add('animate-in');
+                }
+            });
+        }
+
+        // Spustíme kontrolu při načtení stránky (pro případ, že už tam uživatel je)
+        window.addEventListener('load', animateOnScroll);
+        // Spustíme kontrolu při každém scrollu
+        window.addEventListener('scroll', animateOnScroll);

@@ -8,41 +8,40 @@
     <link rel="stylesheet" href="css/cleaned_styles.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/cinnamon_icon1.png" />
-
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><img src="assets/logo_trade.png" alt="Ceylon Cinnamon Trade Logo"></a>  
-                <div class="menu-toggle">
+              <a href="index.html" class="logo"><img src="assets/logo_trade.png" alt="Ceylon Cinnamon Trade Logo"></a>  
+              <div class="menu-toggle">
                   <span></span>
                   <span></span>
                   <span></span>
-                </div>
+              </div>
 
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="grade.html">Grades</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="grade.html">Grades</a></li>
+                <li><a href="contact.html">Contact</a></li>
                     <li class="list-item info-item flex flex-col flex-row start-text">
-                        <a href="https://wa.me/+420723028973" target="_blank" class="push-right underline break">
-                            <img src="assets/whatsapp.png" alt="WhatsApp" width="30px" height="30px">                            
-                        </a>
-                    </li>
-                </ul>
+                    <a href="https://wa.me/+420723028973" target="_blank" class="push-right underline break">
+                        <img src="assets/whatsapp.png" alt="WhatsApp" width="30px" height="30px">                            
+                    </a>
+                </li>
+              </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Premium Ceylon Cinnamon Exporter</h1>
-            <p><strong>Authentic Ceylon cinnamon from Sri Lanka supplied to international importers and food manufacturers.</strong></p>
-            <a class="btn" href="#contact">Request a Quote</a>
+            <h1 class="hero-title">Premium Ceylon Cinnamon Exporter</h1>
+            <p class="hero-subtitle"><strong>Authentic Ceylon cinnamon from Sri Lanka supplied to international importers and food manufacturers.</strong></p>
+            <a class="hero-btn" href="contact.html">Contact Us</a>
         </div>
     </section>
     <!--- CERTIFIKÁTY -->
@@ -51,14 +50,17 @@
       <img src="assets/ISO 22000.jpg" alt="ISO 22000 Certificate" class="certificates">
       <img src="assets/organic.jpg" alt="Organic Certificate" class="certificates">
       <img src="assets/HACCP_zluta.jpg" alt="HACCP Certificate" class="certificates">
-      <img src="assets/USDA_organic.png" alt="USDA Organic Certificate" class="certificates">
+      <img src="assets/USDA_organic.png" alt="USDA Organic Certificate" class="certificates" style="border-radius: 100px;">
+      <img src="assets/JAS.jpg" alt="JAS Certificate" class="certificates">
     </div>
 
-    <section>
-        <div class="container">
-            <h2>Why Choose Ceylon Cinnamon (Cinnamomum verum)</h2>
-            <div style="max-width:700px;margin:auto">
-                <p style="text-align:center;">
+    <section id="about-us-section">
+        <div class="about-container">
+            
+            <div class="about-card js-scroll-trigger">
+              <h2 class="about-title">Why Choose Ceylon Cinnamon (Cinnamomum verum)</h2>
+
+                <div class="about-text">
                     In the global market, not all cinnamon is created equal. While common <strong>Cassia cinnamon</strong> is a cheaper substitute with a harsh, spicy bite, <strong>True Ceylon Cinnamon (Cinnamomum verum)</strong> is a world-renowned treasure, meticulously hand-harvested exclusively in Sri Lanka.
                 </p>
                 <h3>Ultra-Low Coumarin Content (The Healthy Choice)</h3>
@@ -77,16 +79,38 @@
                 <p>
                     The botanical name <strong>Cinnamomum verum</strong> literally translates to "True Cinnamon." Sourced directly from its ancestral home in <strong>Sri Lanka</strong>, our cinnamon represents a commitment to heritage, sustainable farming, and the traditional skills of local peelers passed down through generations.
                 </p>
-                <img src="assets/cinnamon quils.jpg" alt="Ceylon Cinnamon Quills" style="width:100%;margin-top:20px;">
+                <div class="home-gallery">
+                   <img src="assets/svitky ruce.jpeg" alt="hands with cinnamon">
+                   <img src="assets/cinnamon quils1.jpg" alt="Ceylon Cinnamon Quills">
+                   <img src="assets/peper.jpeg" alt="black pepper">
+                </div>
+
+                <div class="about-text">
+                    <div class="certificates">
+                        <img src="assets/certificate.png" alt="Certificates">
+
+                        <div class="cert-text">
+                          <strong>Certificates:</strong>
+                          <ul>
+                            <li>USDA Organic</li>
+                            <li>JAS</li>
+                            <li>ISO 22000</li>
+                            <li>HACCP</li>
+                            <li>Organic Certification</li>
+                            <li>COA - Certificate of Analysis</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </div>
     </section>
-
+<!--
     <section id="contact">
         <div class="container">
             <h2>Request a Quote</h2>
             <form>
-                 <!-- spam protection -->
+                 
                 <input type="text" name="website" style="display:none">
                 
                 <input type="text" name="companyName" placeholder="Company Name" required>
@@ -104,17 +128,17 @@
                 <button type="submit">Send Inquiry</button>
             </form>
         </div>
-    </section>
+    </section>    -->
 
     <footer class="site-footer">
         <div class="footer-left">
           <p class="footer-brand">Ceylon Cinnamon Trade</p>
           <p class="footer-tagline"><strong>Premium Ceylon Cinnamon Exporter From Sri Lanka</strong></p>
           <p class="footer-contact">
-          Email:
-          <a href="mailto:daniel.pechacek@ceylonwoodexports.com" class="footer-link">
-          daniel.pechacek@ceylonwoodexports.com
-          </a>
+            Email:
+            <a href="mailto:daniel.pechacek@ceylonwoodexports.com" class="footer-link">
+            daniel.pechacek@ceylonwoodexports.com
+            </a>
           </p>
         </div>
 

@@ -76,15 +76,15 @@
     },
 
     quillings: {
-      title: "Quills",
+      title: "Quillings/Chips",
       desc: "Whole cinnamon quills for various applications.",
       specs: [
         "Whole quills",
         "Various sizes available",
         "Export grade"
       ],
-      image: "assets/quillings1.jpg",
-      alt: "Cinnamon quills",
+      image: "assets/quillings2.jpg",
+      alt: "Cinnamon quillings/Chips",
       moq: "100 kg",
       packaging: "Bales / Cartons"
     },
