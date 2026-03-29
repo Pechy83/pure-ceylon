@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceylon Cinnamon Trade | Premium Ceylon Cinnamon Exporter</title>
+    <title>Ceylon Cinnamon Trade | Premium Ceylon Cinnamon Exporter | Bulk export to EU • Certified quality • COA available</title>
     <meta name="description" content="Supplier of authentic Ceylon cinnamon (cinnamon verum) from Sri Lanka. Bulk export of cinnamon quills, powder and cut cinnamon for international buyers.">
     <link rel="stylesheet" href="css/cleaned_styles.css">
     <!-- Favicon -->
@@ -55,7 +55,7 @@
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('alba')">
         <h3>Alba</h3>
         <p>Premium grade cinnamon</p>
-        <img src="assets/alba.jpg" alt="Alba quills">
+        <img src="assets/alba.jpg" alt="Alba quills" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('c5')">
@@ -67,7 +67,7 @@
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('c4')">
         <h3>C4</h3>
         <p>Commercial grade</p>
-        <img src="assets/continental.jpg" alt="C4 quills">
+        <img src="assets/continental.jpg" alt="C4 quills" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('m4')">
@@ -79,7 +79,7 @@
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('h1')">
         <h3>H1/H2</h3>
         <p>Industrial grade</p>
-        <img src="assets/hamburg.jpg" alt="H1 quills">
+        <img src="assets/hamburg.jpg" alt="H1 quills" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('quillings')">
@@ -91,61 +91,64 @@
       <div class="catalog-card" data-category="cinnamon" onclick="openProduct('powder')">
         <h3>Powder</h3>
         <p>Export grade</p>
-        <img src="assets/powder1.jpg" alt="Cinnamon powder">
+        <img src="assets/powder1.jpg" alt="Cinnamon powder" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="oil" onclick="openProduct('leafoil')">
         <h3>Leaf Oil</h3>
         <p>Essential oil</p>
-        <img src="assets/leaf_oil1.jpg" alt="Cinnamon leaf oil">
+        <img src="assets/leaf_oil1.jpg" alt="Cinnamon leaf oil" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="oil" onclick="openProduct('barkoil50')">
         <h3>Bark Oil 50%</h3>
         <p>High cinnamaldehyde</p>
-        <img src="assets/bark_oil.jpg" alt="Cinnamon bark oil">
+        <img src="assets/bark_oil.jpg" alt="Cinnamon bark oil" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="oil" onclick="openProduct('barkoil30')">
         <h3>Bark Oil 30%</h3>
         <p>High cinnamaldehyde</p>
-        <img src="assets/Cinnamon_bark_Oil.webp" alt="Cinnamon bark oil">
+        <img src="assets/Cinnamon_bark_Oil.webp" alt="Cinnamon bark oil" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="spice" onclick="openProduct('pepper')">
         <h3>Black Pepper</h3>
         <p>Premium export quality</p>
-        <img src="assets/black_peper.jpg" alt="Black pepper">
+        <img src="assets/black_peper.jpg" alt="Black pepper" loading="lazy">
       </div>
 
       <div class="catalog-card" data-category="spice" onclick="openProduct('clove')">
         <h3>Clove</h3>
         <p>High aroma spice</p>
-        <img src="assets/clove.jpg" alt="Clove">
+        <img src="assets/clove.jpg" alt="Clove" loading="lazy">
       </div>
     </div>
 
     <!-- MODAL -->
-  <div id="productModal" class="modal" onclick="closeOnBackdrop(event)">
-    <div class="modal-content">
+    <div id="productModal" class="modal" onclick="closeOnBackdrop(event)">
+      <div class="modal-content">
 
-      <span class="close" onclick="closeProduct()">&times;</span>
+        <span class="close" onclick="closeProduct()">&times;</span>
 
-      <img id="modalImage" class="modal-image" src="" alt="">
+        <img id="modalImage" class="modal-image" src="" alt="">
 
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <ul id="modalSpecs"></ul>
+        <h2 id="modalTitle"></h2>
+          <p id="modalDesc"></p>
+          <ul id="modalSpecs"></ul>
 
-      <div class="modal-extra">
-        <p id="modalOrigin"><strong>Origin:</strong> Sri Lanka</p>
-        <p id="modalMOQ"><strong>MOQ:</strong> 100 kg</p>
-        <p id="modalPackaging"><strong>Packaging:</strong> Bales / Cartons</p>
+        <div class="modal-extra">
+          <p id="modalOrigin"><strong>Origin:</strong> Sri Lanka</p>
+          <p id="modalMOQ"><strong>MOQ:</strong> 100 kg</p>
+          <p id="modalPackaging"><strong>Packaging:</strong> Export packaging (Bales / Cartons)</p>
+          <p id="modalDocs"><strong>EU-ready documentation:</strong> COA, lab reports and export documents available</p>
 
+        </div>
+          <a href="contact.html" class="btn-primary">Request Price List</a>
+        </div>
       </div>
-        <a href="contact.html" class="btn-primary">Contact Us</a>
     </div>
-  </div>
+  </div>  
 </section>
   
   <footer class="site-footer">
@@ -172,7 +175,7 @@
         </div>
     </footer>
 
-  <script src="js/main.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/main.js"></script> 
 </body>
 </html>

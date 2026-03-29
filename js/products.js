@@ -12,7 +12,8 @@
       image: "assets/alba1.jpg",
       alt: "Alba cinnamon quills",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     c5: {
@@ -27,7 +28,8 @@
       image: "assets/C5 special.jpg",
       alt: "C5 cinnamon quills",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     c4: {
@@ -42,7 +44,8 @@
       image: "assets/C4.jpg",
       alt: "C4 cinnamon quills",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     m4: {
@@ -57,7 +60,8 @@
       image: "assets/M4.jpg",
       alt: "M4 cinnamon quills",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     h1: {
@@ -70,9 +74,10 @@
         "Consistent supply"
       ],
       image: "assets/H1.jpg",
-      alt: "H1 cinnamon quills",
+      alt: " H1 cinnamon quills",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     quillings: {
@@ -86,7 +91,8 @@
       image: "assets/quillings2.jpg",
       alt: "Cinnamon quillings/Chips",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     powder: {
@@ -100,7 +106,8 @@
       image: "assets/powder1.jpg",
       alt: "Cinnamon powder",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     leafoil: {
@@ -113,8 +120,9 @@
       ],
       image: "assets/leafoil1.jpg",
       alt: "Cinnamon leaf oil",
-      moq: "100 kg",
-      packaging: "Drums / Canisters"
+      moq: "10 kg",
+      packaging: "Export packaging (Drums / Canisters)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     barkoil50: {
@@ -127,8 +135,9 @@
       ],
       image: "assets/barkoil50.jpg",
       alt: "Cinnamon bark oil 50%",
-      moq: "100 kg",
-      packaging: "Drums / Canisters"
+      moq: "5 kg",
+      packaging: "Export packaging (Drums / Canisters)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     barkoil30: {
@@ -141,8 +150,9 @@
       ],
       image: "assets/barkoil30.jpg",
       alt: "Cinnamon bark oil 30%",
-      moq: "100 kg",
-      packaging: "Drums / Canisters"
+      moq: "5 kg",
+      packaging: "Export packaging (Drums / Canisters)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     pepper: {
@@ -156,7 +166,8 @@
       image: "assets/pepper1.jpg",
       alt: "Black pepper",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     },
 
     clove: {
@@ -170,7 +181,8 @@
       image: "assets/clove1.jpg",
       alt: "Clove spice",
       moq: "100 kg",
-      packaging: "Bales / Cartons"
+      packaging: "Export packaging (Bales / Cartons)",
+      eureadydocumentation: "COA, lab reports and export documents available"
     }
   };
 
