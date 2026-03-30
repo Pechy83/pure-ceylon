@@ -9,7 +9,7 @@
         "Light color and refined aroma",
         "Ideal for high-end buyers"
       ],
-      image: "assets/alba1.jpg",
+      image: "assets/alba_web.jpg",
       alt: "Alba cinnamon quills",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -25,7 +25,7 @@
         "Popular commercial grade",
         "Stable aroma and appearance"
       ],
-      image: "assets/C5 special.jpg",
+      image: "assets/C5 special_web.jpg",
       alt: "C5 cinnamon quills",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -41,7 +41,7 @@
         "Reliable aroma",
         "Competitive price segment"
       ],
-      image: "assets/C4.jpg",
+      image: "assets/C4_web.jpg",
       alt: "C4 cinnamon quills",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -57,7 +57,7 @@
         "Balanced price and quality",
         "Suitable for large orders"
       ],
-      image: "assets/M4.jpg",
+      image: "assets/M4_web.jpg",
       alt: "M4 cinnamon quills",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -73,7 +73,7 @@
         "Economical option",
         "Consistent supply"
       ],
-      image: "assets/H1.jpg",
+      image: "assets/H1_web.jpg",
       alt: " H1 cinnamon quills",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -81,15 +81,15 @@
     },
 
     quillings: {
-      title: "Quillings/Chips",
-      desc: "Whole cinnamon quills for various applications.",
+      title: "Quillings",
+      desc: "Carefully selected Ceylon cinnamon quills for wholesale distribution, retail packaging, spice blends, tea production, and export markets.",
       specs: [
         "Whole quills",
         "Various sizes available",
-        "Export grade"
+        "tea bags, extraction"
       ],
-      image: "assets/quillings2.jpg",
-      alt: "Cinnamon quillings/Chips",
+      image: "assets/quillings_web.jpg",
+      alt: "Cinnamon quillings",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
       eureadydocumentation: "COA, lab reports and export documents available"
@@ -97,13 +97,13 @@
 
     powder: {
       title: "Powder",
-      desc: "Finely ground cinnamon powder for culinary and industrial use.",
+      desc: "Finely ground Ceylon cinnamon powder suitable for food manufacturing, seasoning blends, bakery products, and retail supply.",
       specs: [
         "Finely ground",
         "Consistent quality",
         "Export grade"
       ],
-      image: "assets/powder1.jpg",
+      image: "assets/powder_web.jpg",
       alt: "Cinnamon powder",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -118,7 +118,7 @@
         "Aromatic profile",
         "Suitable for industrial and cosmetic use"
       ],
-      image: "assets/leafoil1.jpg",
+      image: "assets/leaf_oil_web.jpg",
       alt: "Cinnamon leaf oil",
       moq: "10 kg",
       packaging: "Export packaging (Drums / Canisters)",
@@ -133,7 +133,7 @@
         "Strong aroma",
         "High-value oil"
       ],
-      image: "assets/barkoil50.jpg",
+      image: "assets/bark_oil_web.jpg",
       alt: "Cinnamon bark oil 50%",
       moq: "5 kg",
       packaging: "Export packaging (Drums / Canisters)",
@@ -148,7 +148,7 @@
         "Balanced strength",
         "Export ready"
       ],
-      image: "assets/barkoil30.jpg",
+      image: "assets/bark_oil_web.jpg",
       alt: "Cinnamon bark oil 30%",
       moq: "5 kg",
       packaging: "Export packaging (Drums / Canisters)",
@@ -163,7 +163,7 @@
         "Clean export quality",
         "Bulk supply"
       ],
-      image: "assets/pepper1.jpg",
+      image: "assets/black_pepper_web.jpg",
       alt: "Black pepper",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
@@ -178,7 +178,7 @@
         "Whole spice",
         "Export grade"
       ],
-      image: "assets/clove1.jpg",
+      image: "assets/clove_web.jpg",
       alt: "Clove spice",
       moq: "100 kg",
       packaging: "Export packaging (Bales / Cartons)",
